@@ -23,11 +23,6 @@ app.use('/', htmlRoutes);
 
 
 
-// const { title } = require('./db/db');
-
-// app.get('/api/db/db', (req, res) => {
-//   res.json(title);
-// });
 
 
 app.listen(PORT, () => {
