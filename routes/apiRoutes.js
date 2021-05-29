@@ -1,22 +1,20 @@
-// The following API routes should be created:
-
 const router = require('express').Router();
 const path = require('path');
 const fs = require('fs');
+const notes = require('../db/db.json');
 
 // do we need to require db.json even tho its empty
 // const { database } = require('../../db/db');
 
+
+// The following API routes should be created:
 
 
 // GET /api/notes should read the db.json file and return all saved notes as JSON.
 
 // --- it think i dont have to use /api/ bc i used the routes on server.js?? lines 23 and 24
 router.get('/notes', (req, res) => {
-  let results = notes;
-  if (req.query) {
-    results = filterByQuery
-  }
+  res.json(notes);
 })
 
 
